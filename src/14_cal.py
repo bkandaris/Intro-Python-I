@@ -34,16 +34,19 @@ from datetime import datetime
 args = sys.argv
 print(args, len(args))
 
+month = datetime.now().month
+year = datetime.now().year
+
 if len(args) == 1:
-  month = datetime.now().month
-  year = datetime.now().year
-elif len(args) ==1:
-  month = args[0]
-  year = datetime.now().year
+    month = datetime.now().month
+    year = datetime.now().year
 elif len(args) == 2:
-  month = args[0]
-  year = args[1]
+    month = args[1]
+    year = datetime.now().year
+elif len(args) == 3:
+    month = args[1]
+    year = args[2]
 else:
-  print("Usage statement")
+    print("A usage statement")
 
 print(month, year)
