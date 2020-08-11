@@ -22,6 +22,11 @@ with open('foo.txt') as f:
 
 # YOUR CODE HERE
 
-with open('bar.txt') as x:
-    print(x.read())
-    x.close()
+y = open("bar.txt", "w")
+y.write("this is the 1st line. \n")
+y.write("this is the 2nd line. \n")
+y.write("this is the 3rd line.")
+y.close()
+with open("bar.txt") as y:
+    print("\n" + y.read())
+print(y.closed)
